@@ -1,0 +1,3 @@
+[submodule "LaTeX-External-Highlighter"]
+	path = LaTeX-External-Highlighter
+	url = git@github.com:W95Psp/LaTeX-External-Highlighter.git

@@ -1,0 +1,49 @@
+\directlua{curPath = "/home/lucas/.latex/"}
+\directlua{lehPath = curPath .. 'LaTeX-External-Highlighter/'}
+\directlua{extern_highlighter = require (lehPath .. "extern_highlighter")}
+\directlua{finalize = extern_highlighter.setup(extern_highlighter.config_print_emacs_ofst, "js")}
+
+\usepackage{graphicx}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage[margin=3.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{luacode}
+\usepackage{fontawesome}
+\usepackage[explicit]{titlesec}
+\usepackage{textpos}
+\usepackage{pdfcomment}
+\usepackage{etoolbox}
+\usepackage{csquotes}
+\usepackage{mathdots}
+\usepackage{makecell}
+\usepackage{mathtools}
+\usepackage[toc,page]{appendix}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{xspace}
+\usepackage[letterspace=120]{microtype}
+\usepackage[htt]{hyphenat}
+\usepackage{caption}
+\usepackage{framed}
+\usepackage{amsfonts}
+\usepackage{atveryend}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{fit}
+\usetikzlibrary{patterns}
+\usetikzlibrary{fadings}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{positioning}
+
+\directlua{dofile(curPath .. "todo.lua")}
+
+\input{names}
+\input{flatuicolors}
+\input{commands}
+
+\AtEndDocument{\import{/home/lucas/.latex/}{default_ending}}
+
+\author{Lucas Franceschino \texttt{<lucas@franceschino.fr>}}

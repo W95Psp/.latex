@@ -1,0 +1,6 @@
+\ifLua{Todo:nonEmpty()}{
+    \newpage
+    \eject \pdfpagewidth=40cm \pdfpageheight=100cm
+    \directlua{Todo:printSummary()}
+}
+\directlua{finalize()}

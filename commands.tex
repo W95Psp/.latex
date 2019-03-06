@@ -1,0 +1,14 @@
+
+\newcommand{\TODO}[1]{\marginpar{\tikz \node at (0,0) [text width=2.8cm, rectangle, fill=clouds, rounded corners]{
+	\begin{spacing}{0.6}
+		\scriptsize \textcolor{carrot}{\faWrench} \setstretch{0.1} #1
+	\end{spacing}
+	\directlua{Todo:new{page=\luastring{\thepage}, content=\luastring{#1}}}
+};}}
+\newcommand{\todo}[1]{\TODO{#1}}
+
+\newcommand{\ifLua}[2]{\directlua{if #1 then tex.print(\luastringN{#2}) end}}
+\newcommand{\ifElseLua}[3]{\directlua{if #1 then tex.print(\luastring{#2}) else tex.print(\luastring{#3}) end}}
+
+\newcommand{\type}[1]{\text{\textbf{#1}}}
+
